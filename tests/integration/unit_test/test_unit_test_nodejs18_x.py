@@ -42,3 +42,14 @@ class UnitTest_nodejs18_x_cookiecutter_quick_start_sqs(UnitTestBase.NodejsUnitTe
 
 class UnitTest_nodejs18_x_cookiecutter_quick_start_web(UnitTestBase.NodejsUnitTestBase):
     directory = "nodejs18.x/web"
+
+
+class UnitTest_nodejs18_x_cookiecutter_quick_start_full_stack(UnitTestBase.NodejsUnitTestBase):
+    directory = "nodejs18.x/full-stack"
+    code_directories = ["backend", "frontend"]
+
+
+class UnitTest_nodejs18_x_cookiecutter_aws_sam_gql_quick_start(UnitTestBase.NodejsUnitTestBase):
+    directory = "nodejs18.x/hello-gql"
+    code_directories = ["greeter"]
+    should_test_lint = False

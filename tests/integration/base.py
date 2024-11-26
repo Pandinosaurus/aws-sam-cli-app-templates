@@ -10,7 +10,7 @@ from unittest import TestCase
 
 from tests import REPO_ROOT
 
-PROJECT_NAME = "project"
+PROJECT_NAME = "project-name"
 
 
 class CommandResult(NamedTuple):
@@ -62,6 +62,7 @@ class Base:
         tempdir: Any
         directory: str
         should_test_lint: bool = True
+        runtime = None
 
         def setUp(self) -> None:
             self.tempdir = tempfile.TemporaryDirectory()
@@ -84,6 +85,9 @@ class Base:
                 "--name",
                 PROJECT_NAME,
             ]
+            if self.runtime:
+                cmdlist.append("--extra-context")
+                cmdlist.append(f'{{"runtime": "{self.runtime}"}}')
             run_command(cmdlist, self.tempdir.name)
             self.assertTrue(self.cwd.exists())
 

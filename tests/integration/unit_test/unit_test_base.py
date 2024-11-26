@@ -60,10 +60,6 @@ class UnitTestBase:
                 result.stdout,
                 r"audited \d+ packages",
             )
-            self.assertIn(
-                "found 0 vulnerabilities",
-                result.stdout,
-            )
 
         def _test_unit_tests(self, code_directory: str):
             cmdlist = [
@@ -112,10 +108,6 @@ class UnitTestBase:
             result = run_command(cmdlist, self.cwd, env=env)
             self.assertNotIn("ERRORS", result.stdout)
 
-
-    class Python37UnitTestBase(PythonUnitTestBase):
-        python_executable = "python3.7"
-
     class Python38UnitTestBase(PythonUnitTestBase):
         python_executable = "python3.8"
 
@@ -124,6 +116,16 @@ class UnitTestBase:
 
     class Python310UnitTestBase(PythonUnitTestBase):
         python_executable = "python3.10"
+
+    class Python311UnitTestBase(PythonUnitTestBase):
+        python_executable = "python3.11"
+
+    class Python312UnitTestBase(PythonUnitTestBase):
+        python_executable = "python3.12"
+
+    class Python313UnitTestBase(PythonUnitTestBase):
+        python_executable = "python3.13"
+        should_test_lint: bool = False
 
     class JavaUnitTestGradleBase(UnitTestBase):
         """

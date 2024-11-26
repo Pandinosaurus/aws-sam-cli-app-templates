@@ -21,11 +21,10 @@ import software.amazon.lambda.powertools.logging.Logging;
 import software.amazon.lambda.powertools.metrics.Metrics;
 {%- endif %}
 {%- if cookiecutter[ "Powertools for AWS Lambda (Java) Tracing" ] == "enabled" %}
-import software.amazon.lambda.powertools.tracing.CaptureMode;
 import software.amazon.lambda.powertools.tracing.Tracing;
-{%- endif %}
 
 import static software.amazon.lambda.powertools.tracing.CaptureMode.*;
+{%- endif %}
 
 /**
  * Handler for requests to Lambda function.
@@ -33,8 +32,7 @@ import static software.amazon.lambda.powertools.tracing.CaptureMode.*;
 public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
     {%- if cookiecutter[ "Powertools for AWS Lambda (Java) Logging" ] == "enabled" %}
-    Logger log = LogManager.getLogger();
-
+    Logger log = LogManager.getLogger(App.class);
 
     @Logging(logEvent = true)
     {%- endif %}
@@ -45,7 +43,7 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
     @Metrics(captureColdStart = true)
     {%- endif %}
     public APIGatewayProxyResponseEvent handleRequest(final APIGatewayProxyRequestEvent input, final Context context) {
-        Map<String, String> headers = new HashMap<>();
+        var headers = new HashMap<String, String>();
         headers.put("Content-Type", "application/json");
         headers.put("X-Custom-Header", "application/json");
 
@@ -71,7 +69,7 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
         {%- if cookiecutter[ "Powertools for AWS Lambda (Java) Logging" ] == "enabled" %}
         log.info("Retrieving {}", address);
         {%- endif %}
-        URL url = new URL(address);
+        var url = new URL(address);
         try (BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()))) {
             return br.lines().collect(Collectors.joining(System.lineSeparator()));
         }

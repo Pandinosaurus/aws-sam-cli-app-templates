@@ -65,7 +65,6 @@ class BuildInvokeBase:
                         self.function_id_by_event[event_file],
                         "-e",
                         Path("events", event_file),
-                        "--debug",
                     ]
                 else:
                     cmdlist = [
@@ -74,7 +73,6 @@ class BuildInvokeBase:
                         "invoke",
                         "-e",
                         Path("events", event_file),
-                        "--debug",
                     ]
                 if self.beta_features:
                     cmdlist.append("--beta-features")
@@ -170,6 +168,19 @@ class BuildInvokeBase:
             "event-get-all-items.json": "getAllItemsFunction",
             "event-get-by-id.json": "getByIdFunction",
             "event-post-item.json": "putItemFunction",
+        }
+
+    class RubyQuickStartWebBuildInvokeBase(BuildInvokeBase):
+        """
+        Based on BuildInvokeBase, quick start web templates have multiple events that call different lambda functions.
+        """
+
+        function_id_by_event = {
+            "get_all_items.json": "GetAllItemsFunction",
+            "create_item.json": "CreateItemFunction",
+            "get_item_by_id.json": "GetItemByIdFunction",
+            "delete_item.json": "DeleteItemFunction",
+            "update_item.json": "UpdateItemFunction",
         }
 
     class DotNetCoreExtraRerunBuildInvokeBase(BuildInvokeBase):

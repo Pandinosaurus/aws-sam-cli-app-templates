@@ -109,49 +109,86 @@
       "useCaseName": "Data processing"
     }
   ],
-  "aot.dotnet7 (provided.al2)": [
+  "dotnet8": [
     {
-      "directory": "al2/dotnet7-aot/hello",
+      "directory": "dotnet8/sqs",
+      "displayName": "Quick Start: SQS",
+      "dependencyManager": "cli-package",
+      "appTemplate": "quick-start-sqs",
+      "packageType": "Zip",
+      "useCaseName": "Data processing"
+    },
+    {
+      "directory": "dotnet8/sns",
+      "displayName": "Quick Start: SNS",
+      "dependencyManager": "cli-package",
+      "appTemplate": "quickstart-sns",
+      "packageType": "Zip",
+      "useCaseName": "Data processing"
+    },
+    {
+      "directory": "dotnet8/hello",
       "displayName": "Hello World Example",
       "dependencyManager": "cli-package",
       "appTemplate": "hello-world",
       "packageType": "Zip",
       "useCaseName": "Hello World Example"
-    }
-  ],
-  "go1.x": [
+    },
     {
-      "directory": "go1.x/hello",
-      "displayName": "Hello World Example",
-      "dependencyManager": "mod",
-      "appTemplate": "hello-world",
+      "directory": "dotnet8/hello-native-aot",
+      "displayName": "Hello World Example using native AOT",
+      "dependencyManager": "cli-package",
+      "appTemplate": "hello-world-native-aot",
       "packageType": "Zip",
       "useCaseName": "Hello World Example"
     },
     {
-      "directory": "go1.x/event-bridge",
-      "displayName": "EventBridge Hello World",
-      "dependencyManager": "mod",
-      "appTemplate": "eventBridge-hello-world",
+      "directory": "dotnet8/hello-pt",
+      "displayName": "Hello World Example .NET With Powertools for AWS Lambda",
+      "dependencyManager": "cli-package",
+      "appTemplate": "hello-world-powertools-dotnet",
       "packageType": "Zip",
-      "useCaseName": "Infrastructure event management"
+      "useCaseName": "Hello World Example with Powertools for AWS Lambda"
     },
     {
-      "directory": "go1.x/event-bridge-schema",
-      "displayName": "EventBridge App from scratch (100+ Event Schemas)",
-      "dependencyManager": "mod",
-      "appTemplate": "eventBridge-schema-app",
-      "isDynamicTemplate": "True",
-      "packageType": "Zip",
-      "useCaseName": "Infrastructure event management"
-    },
-    {
-      "directory": "go1.x/step-func",
+      "directory": "dotnet8/step-func",
       "displayName": "Step Functions Sample App (Stock Trader)",
-      "dependencyManager": "mod",
+      "dependencyManager": "cli-package",
       "appTemplate": "step-functions-sample-app",
       "packageType": "Zip",
       "useCaseName": "Multi-step workflow"
+    },
+    {
+      "directory": "dotnet8/cw-event",
+      "displayName": "Quick Start: Scheduled Events",
+      "dependencyManager": "cli-package",
+      "appTemplate": "quick-start-cloudwatch-events",
+      "packageType": "Zip",
+      "useCaseName": "Scheduled task"
+    },
+    {
+      "directory": "dotnet8/scratch",
+      "displayName": "Quick Start: From Scratch",
+      "dependencyManager": "cli-package",
+      "appTemplate": "quick-start-from-scratch",
+      "packageType": "Zip",
+      "useCaseName": "Standalone function"
+    },
+    {
+      "directory": "dotnet8/web",
+      "displayName": "Quick Start: Web Backend",
+      "dependencyManager": "cli-package",
+      "appTemplate": "quick-start-web",
+      "packageType": "Zip",
+      "useCaseName": "Serverless API"
+    },
+    {
+      "directory": "dotnet8/s3",
+      "displayName": "Quick Start: S3",
+      "dependencyManager": "cli-package",
+      "appTemplate": "quick-start-s3",
+      "packageType": "Zip",
+      "useCaseName": "Data processing"
     }
   ],
   "go (provided.al2)": [
@@ -197,80 +234,14 @@
       "useCaseName": "Lambda Response Streaming"
     }
   ],
-  "java8": [
+  "go (provided.al2023)": [
     {
-      "directory": "java8/hello-gradle",
-      "displayName": "Hello World Example: Gradle",
-      "dependencyManager": "gradle",
+      "directory": "al2023/go/hello",
+      "displayName": "Hello World Example",
+      "dependencyManager": "mod",
       "appTemplate": "hello-world",
       "packageType": "Zip",
       "useCaseName": "Hello World Example"
-    },
-    {
-      "directory": "java8/hello-maven",
-      "displayName": "Hello World Example: Maven",
-      "dependencyManager": "maven",
-      "appTemplate": "hello-world",
-      "packageType": "Zip",
-      "useCaseName": "Hello World Example"
-    },
-    {
-      "directory": "java8/hello-pt-maven",
-      "displayName": "Hello World Example Java With Powertools for AWS Lambda",
-      "dependencyManager": "maven",
-      "appTemplate": "hello-world-powertools-java",
-      "packageType": "Zip",
-      "useCaseName": "Hello World Example with Powertools for AWS Lambda"
-    },
-    {
-      "directory": "java8/event-bridge-gradle",
-      "displayName": "EventBridge Hello World: Gradle",
-      "dependencyManager": "gradle",
-      "appTemplate": "eventBridge-hello-world",
-      "packageType": "Zip",
-      "useCaseName": "Infrastructure event management"
-    },
-    {
-      "directory": "java8/event-bridge-maven",
-      "displayName": "EventBridge Hello World: Maven",
-      "dependencyManager": "maven",
-      "appTemplate": "eventBridge-hello-world",
-      "packageType": "Zip",
-      "useCaseName": "Infrastructure event management"
-    },
-    {
-      "directory": "java8/event-bridge-schema-gradle",
-      "displayName": "EventBridge App from scratch (100+ Event Schemas): Gradle",
-      "dependencyManager": "gradle",
-      "appTemplate": "eventBridge-schema-app",
-      "isDynamicTemplate": "True",
-      "packageType": "Zip",
-      "useCaseName": "Infrastructure event management"
-    },
-    {
-      "directory": "java8/event-bridge-schema-maven",
-      "displayName": "EventBridge App from scratch (100+ Event Schemas): Maven",
-      "dependencyManager": "maven",
-      "appTemplate": "eventBridge-schema-app",
-      "isDynamicTemplate": "True",
-      "packageType": "Zip",
-      "useCaseName": "Infrastructure event management"
-    },
-    {
-      "directory": "java8/step-func-gradle",
-      "displayName": "Step Functions Sample App (Stock Trader): Gradle",
-      "dependencyManager": "gradle",
-      "appTemplate": "step-functions-sample-app",
-      "packageType": "Zip",
-      "useCaseName": "Multi-step workflow"
-    },
-    {
-      "directory": "java8/step-func-maven",
-      "displayName": "Step Functions Sample App (Stock Trader): Maven",
-      "dependencyManager": "maven",
-      "appTemplate": "step-functions-sample-app",
-      "packageType": "Zip",
-      "useCaseName": "Multi-step workflow"
     }
   ],
   "java8.al2": [
@@ -370,6 +341,14 @@
       "directory": "java11/hello-pt-maven",
       "displayName": "Hello World Example Java With Powertools for AWS Lambda",
       "dependencyManager": "maven",
+      "appTemplate": "hello-world-powertools-java",
+      "packageType": "Zip",
+      "useCaseName": "Hello World Example with Powertools for AWS Lambda"
+    },
+    {
+      "directory": "java11/hello-pt-gradle",
+      "displayName": "Hello World Example Java With Powertools for AWS Lambda",
+      "dependencyManager": "gradle",
       "appTemplate": "hello-world-powertools-java",
       "packageType": "Zip",
       "useCaseName": "Hello World Example with Powertools for AWS Lambda"
@@ -509,120 +488,72 @@
       "useCaseName": "Multi-step workflow"
     }
   ],
-  "nodejs16.x": [
+  "java21": [
     {
-      "directory": "nodejs16.x/hello",
-      "displayName": "Hello World Example",
-      "dependencyManager": "npm",
+      "directory": "java21/hello-gradle",
+      "displayName": "Hello World Example: Gradle",
+      "dependencyManager": "gradle",
       "appTemplate": "hello-world",
       "packageType": "Zip",
       "useCaseName": "Hello World Example"
     },
     {
-      "directory": "nodejs16.x/hello-ts",
-      "displayName": "Hello World Example TypeScript",
-      "dependencyManager": "npm",
-      "appTemplate": "hello-world-typescript",
+      "directory": "java21/hello-maven",
+      "displayName": "Hello World Example: Maven",
+      "dependencyManager": "maven",
+      "appTemplate": "hello-world",
       "packageType": "Zip",
       "useCaseName": "Hello World Example"
     },
     {
-      "directory": "nodejs16.x/hello-ts-pt",
-      "displayName": "Hello World Example TypeScript With Powertools for AWS Lambda",
-      "dependencyManager": "npm",
-      "appTemplate": "hello-world-powertools-typescript",
+      "directory": "java21/event-bridge-gradle",
+      "displayName": "EventBridge Hello World: Gradle",
+      "dependencyManager": "gradle",
+      "appTemplate": "eventBridge-hello-world",
       "packageType": "Zip",
-      "useCaseName": "Hello World Example with Powertools for AWS Lambda"
+      "useCaseName": "Infrastructure event management"
     },
     {
-      "directory": "nodejs16.x/step-func",
-      "displayName": "Step Functions Sample App (Stock Trader)",
-      "dependencyManager": "npm",
+      "directory": "java21/event-bridge-maven",
+      "displayName": "EventBridge Hello World: Maven",
+      "dependencyManager": "maven",
+      "appTemplate": "eventBridge-hello-world",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "java21/event-bridge-schema-gradle",
+      "displayName": "EventBridge App from scratch (100+ Event Schemas): Gradle",
+      "dependencyManager": "gradle",
+      "appTemplate": "eventBridge-schema-app",
+      "isDynamicTemplate": "True",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "java21/event-bridge-schema-maven",
+      "displayName": "EventBridge App from scratch (100+ Event Schemas): Maven",
+      "dependencyManager": "maven",
+      "appTemplate": "eventBridge-schema-app",
+      "isDynamicTemplate": "True",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "java21/step-func-gradle",
+      "displayName": "Step Functions Sample App (Stock Trader): Gradle",
+      "dependencyManager": "gradle",
       "appTemplate": "step-functions-sample-app",
       "packageType": "Zip",
       "useCaseName": "Multi-step workflow"
     },
     {
-      "directory": "nodejs16.x/scratch",
-      "displayName": "Quick Start: From Scratch",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-from-scratch",
+      "directory": "java21/step-func-maven",
+      "displayName": "Step Functions Sample App (Stock Trader): Maven",
+      "dependencyManager": "maven",
+      "appTemplate": "step-functions-sample-app",
       "packageType": "Zip",
-      "useCaseName": "Standalone function"
-    },
-    {
-      "directory": "nodejs16.x/cw-event",
-      "displayName": "Quick Start: Scheduled Events",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-cloudwatch-events",
-      "packageType": "Zip",
-      "useCaseName": "Scheduled task"
-    },
-    {
-      "directory": "nodejs16.x/s3",
-      "displayName": "Quick Start: S3",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-s3",
-      "packageType": "Zip",
-      "useCaseName": "Data processing"
-    },
-    {
-      "directory": "nodejs16.x/sns",
-      "displayName": "Quick Start: SNS",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-sns",
-      "packageType": "Zip",
-      "useCaseName": "Data processing"
-    },
-    {
-      "directory": "nodejs16.x/sqs",
-      "displayName": "Quick Start: SQS",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-sqs",
-      "packageType": "Zip",
-      "useCaseName": "Data processing"
-    },
-    {
-      "directory": "nodejs16.x/web",
-      "displayName": "Quick Start: Web Backend",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-web",
-      "packageType": "Zip",
-      "useCaseName": "Serverless API"
-    },
-    {
-      "directory": "nodejs16.x/web-conn",
-      "displayName": "Quick Start: Web Backend With Connectors",
-      "dependencyManager": "npm",
-      "appTemplate": "hello-world-connector",
-      "packageType": "Zip",
-      "useCaseName": "Serverless Connector Hello World Example"
-    },
-    {
-      "directory": "nodejs16.x/step-func-conn",
-      "displayName": "Step Functions Sample App (Stock Trader) With Connectors",
-      "dependencyManager": "npm",
-      "appTemplate": "step-functions-with-connectors",
-      "packageType": "Zip",
-      "useCaseName": "Multi-step workflow with Connectors"
-    },
-    {
-      "directory": "nodejs16.x/response-streaming",
-      "displayName": "Lambda function using Response Streaming",
-      "dependencyManager": "npm",
-      "appTemplate": "response-streaming",
-      "packageType": "Zip",
-      "useCaseName": "Lambda Response Streaming"
-    }
-  ],
-  "amazon/nodejs16.x-base": [
-    {
-      "directory": "nodejs16.x/hello-img",
-      "displayName": "Hello World Image Example",
-      "dependencyManager": "npm",
-      "appTemplate": "hello-world-lambda-image",
-      "packageType": "Image",
-      "useCaseName": "Hello World Example"
+      "useCaseName": "Multi-step workflow"
     }
   ],
   "nodejs18.x": [
@@ -633,6 +564,14 @@
       "appTemplate": "hello-world",
       "packageType": "Zip",
       "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "nodejs18.x/hello-gql",
+      "displayName": "GraphQLApi Hello World Example",
+      "dependencyManager": "npm",
+      "appTemplate": "graphql-api-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "GraphQLApi Hello World Example"
     },
     {
       "directory": "nodejs18.x/hello-ts",
@@ -707,6 +646,14 @@
       "useCaseName": "Serverless API"
     },
     {
+      "directory": "nodejs18.x/full-stack",
+      "displayName": "Quick Start: Full Stack Application",
+      "dependencyManager": "npm",
+      "appTemplate": "quick-start-full-stack",
+      "packageType": "Zip",
+      "useCaseName": "Full Stack"
+    },
+    {
       "directory": "nodejs18.x/response-streaming",
       "displayName": "Lambda function using Response Streaming",
       "dependencyManager": "npm",
@@ -725,9 +672,9 @@
       "useCaseName": "Hello World Example"
     }
   ],
-  "nodejs14.x": [
+  "nodejs20.x": [
     {
-      "directory": "nodejs14.x/hello",
+      "directory": "nodejs20.x/hello",
       "displayName": "Hello World Example",
       "dependencyManager": "npm",
       "appTemplate": "hello-world",
@@ -735,7 +682,15 @@
       "useCaseName": "Hello World Example"
     },
     {
-      "directory": "nodejs14.x/hello-ts",
+      "directory": "nodejs20.x/hello-gql",
+      "displayName": "GraphQLApi Hello World Example",
+      "dependencyManager": "npm",
+      "appTemplate": "graphql-api-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "GraphQLApi Hello World Example"
+    },
+    {
+      "directory": "nodejs20.x/hello-ts",
       "displayName": "Hello World Example TypeScript",
       "dependencyManager": "npm",
       "appTemplate": "hello-world-typescript",
@@ -743,7 +698,7 @@
       "useCaseName": "Hello World Example"
     },
     {
-      "directory": "nodejs14.x/hello-ts-pt",
+      "directory": "nodejs20.x/hello-ts-pt",
       "displayName": "Hello World Example TypeScript With Powertools for AWS Lambda",
       "dependencyManager": "npm",
       "appTemplate": "hello-world-powertools-typescript",
@@ -751,7 +706,7 @@
       "useCaseName": "Hello World Example with Powertools for AWS Lambda"
     },
     {
-      "directory": "nodejs14.x/step-func",
+      "directory": "nodejs20.x/step-func",
       "displayName": "Step Functions Sample App (Stock Trader)",
       "dependencyManager": "npm",
       "appTemplate": "step-functions-sample-app",
@@ -759,7 +714,7 @@
       "useCaseName": "Multi-step workflow"
     },
     {
-      "directory": "nodejs14.x/scratch",
+      "directory": "nodejs20.x/scratch",
       "displayName": "Quick Start: From Scratch",
       "dependencyManager": "npm",
       "appTemplate": "quick-start-from-scratch",
@@ -767,7 +722,7 @@
       "useCaseName": "Standalone function"
     },
     {
-      "directory": "nodejs14.x/cw-event",
+      "directory": "nodejs20.x/cw-event",
       "displayName": "Quick Start: Scheduled Events",
       "dependencyManager": "npm",
       "appTemplate": "quick-start-cloudwatch-events",
@@ -775,7 +730,7 @@
       "useCaseName": "Scheduled task"
     },
     {
-      "directory": "nodejs14.x/s3",
+      "directory": "nodejs20.x/s3",
       "displayName": "Quick Start: S3",
       "dependencyManager": "npm",
       "appTemplate": "quick-start-s3",
@@ -783,7 +738,7 @@
       "useCaseName": "Data processing"
     },
     {
-      "directory": "nodejs14.x/sns",
+      "directory": "nodejs20.x/sns",
       "displayName": "Quick Start: SNS",
       "dependencyManager": "npm",
       "appTemplate": "quick-start-sns",
@@ -791,7 +746,7 @@
       "useCaseName": "Data processing"
     },
     {
-      "directory": "nodejs14.x/sqs",
+      "directory": "nodejs20.x/sqs",
       "displayName": "Quick Start: SQS",
       "dependencyManager": "npm",
       "appTemplate": "quick-start-sqs",
@@ -799,7 +754,7 @@
       "useCaseName": "Data processing"
     },
     {
-      "directory": "nodejs14.x/web",
+      "directory": "nodejs20.x/web",
       "displayName": "Quick Start: Web Backend",
       "dependencyManager": "npm",
       "appTemplate": "quick-start-web",
@@ -807,25 +762,35 @@
       "useCaseName": "Serverless API"
     },
     {
-      "directory": "nodejs14.x/web-conn",
-      "displayName": "Quick Start: Web Backend With Connectors",
+      "directory": "nodejs20.x/full-stack",
+      "displayName": "Quick Start: Full Stack Application",
       "dependencyManager": "npm",
-      "appTemplate": "hello-world-connector",
+      "appTemplate": "quick-start-full-stack",
       "packageType": "Zip",
-      "useCaseName": "Serverless Connector Hello World Example"
+      "useCaseName": "Full Stack"
     },
     {
-      "directory": "nodejs14.x/step-func-conn",
-      "displayName": "Step Functions Sample App (Stock Trader) With Connectors",
+      "directory": "nodejs20.x/response-streaming",
+      "displayName": "Lambda function using Response Streaming",
       "dependencyManager": "npm",
-      "appTemplate": "step-functions-with-connectors",
+      "appTemplate": "response-streaming",
       "packageType": "Zip",
-      "useCaseName": "Multi-step workflow with Connectors"
+      "useCaseName": "Lambda Response Streaming"
     }
   ],
-  "nodejs12.x": [
+  "amazon/nodejs20.x-base": [
     {
-      "directory": "nodejs12.x/hello",
+      "directory": "nodejs20.x/hello-img",
+      "displayName": "Hello World Image Example",
+      "dependencyManager": "npm",
+      "appTemplate": "hello-world-lambda-image",
+      "packageType": "Image",
+      "useCaseName": "Hello World Example"
+    }
+  ],
+  "nodejs22.x": [
+    {
+      "directory": "nodejs22.x/hello",
       "displayName": "Hello World Example",
       "dependencyManager": "npm",
       "appTemplate": "hello-world",
@@ -833,143 +798,110 @@
       "useCaseName": "Hello World Example"
     },
     {
-      "directory": "nodejs12.x/step-func",
-      "displayName": "Step Functions Sample App (Stock Trader)",
+      "directory": "nodejs22.x/hello-gql",
+      "displayName": "GraphQLApi Hello World Example",
       "dependencyManager": "npm",
-      "appTemplate": "step-functions-sample-app",
+      "appTemplate": "graphql-api-sample-app",
       "packageType": "Zip",
-      "useCaseName": "Multi-step workflow"
+      "useCaseName": "GraphQLApi Hello World Example"
     },
     {
-      "directory": "nodejs12.x/scratch",
-      "displayName": "Quick Start: From Scratch",
+      "directory": "nodejs22.x/hello-ts",
+      "displayName": "Hello World Example TypeScript",
       "dependencyManager": "npm",
-      "appTemplate": "quick-start-from-scratch",
-      "packageType": "Zip",
-      "useCaseName": "Standalone function"
-    },
-    {
-      "directory": "nodejs12.x/cw-event",
-      "displayName": "Quick Start: Scheduled Events",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-cloudwatch-events",
-      "packageType": "Zip",
-      "useCaseName": "Scheduled task"
-    },
-    {
-      "directory": "nodejs12.x/s3",
-      "displayName": "Quick Start: S3",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-s3",
-      "packageType": "Zip",
-      "useCaseName": "Data processing"
-    },
-    {
-      "directory": "nodejs12.x/sns",
-      "displayName": "Quick Start: SNS",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-sns",
-      "packageType": "Zip",
-      "useCaseName": "Data processing"
-    },
-    {
-      "directory": "nodejs12.x/sqs",
-      "displayName": "Quick Start: SQS",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-sqs",
-      "packageType": "Zip",
-      "useCaseName": "Data processing"
-    },
-    {
-      "directory": "nodejs12.x/ts",
-      "displayName": "Quick Start: App Backend using TypeScript",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-typescript-app",
-      "packageType": "Zip",
-      "useCaseName": "Serverless API"
-    },
-    {
-      "directory": "nodejs12.x/web",
-      "displayName": "Quick Start: Web Backend",
-      "dependencyManager": "npm",
-      "appTemplate": "quick-start-web",
-      "packageType": "Zip",
-      "useCaseName": "Serverless API"
-    },
-    {
-      "directory": "nodejs12.x/web-conn",
-      "displayName": "Quick Start: Web Backend With Connectors",
-      "dependencyManager": "npm",
-      "appTemplate": "hello-world-connector",
-      "packageType": "Zip",
-      "useCaseName": "Serverless Connector Hello World Example"
-    },
-    {
-      "directory": "nodejs12.x/step-func-conn",
-      "displayName": "Step Functions Sample App (Stock Trader) With Connectors",
-      "dependencyManager": "npm",
-      "appTemplate": "step-functions-with-connectors",
-      "packageType": "Zip",
-      "useCaseName": "Multi-step workflow with Connectors"
-    }
-  ],
-  "python3.7": [
-    {
-      "directory": "python3.7/hello",
-      "displayName": "Hello World Example",
-      "dependencyManager": "pip",
-      "appTemplate": "hello-world",
+      "appTemplate": "hello-world-typescript",
       "packageType": "Zip",
       "useCaseName": "Hello World Example"
     },
     {
-      "directory": "python3.7/hello-pt",
-      "displayName": "Hello World Example Python With Powertools for AWS Lambda",
-      "dependencyManager": "pip",
-      "appTemplate": "hello-world-powertools-python",
+      "directory": "nodejs22.x/hello-ts-pt",
+      "displayName": "Hello World Example TypeScript With Powertools for AWS Lambda",
+      "dependencyManager": "npm",
+      "appTemplate": "hello-world-powertools-typescript",
       "packageType": "Zip",
       "useCaseName": "Hello World Example with Powertools for AWS Lambda"
     },
     {
-      "directory": "python3.7/event-bridge",
-      "displayName": "EventBridge Hello World",
-      "dependencyManager": "pip",
-      "appTemplate": "eventBridge-hello-world",
-      "packageType": "Zip",
-      "useCaseName": "Infrastructure event management"
-    },
-    {
-      "directory": "python3.7/event-bridge-schema",
-      "displayName": "EventBridge App from scratch (100+ Event Schemas)",
-      "dependencyManager": "pip",
-      "appTemplate": "eventBridge-schema-app",
-      "isDynamicTemplate": "True",
-      "packageType": "Zip",
-      "useCaseName": "Infrastructure event management"
-    },
-    {
-      "directory": "python3.7/step-func",
+      "directory": "nodejs22.x/step-func",
       "displayName": "Step Functions Sample App (Stock Trader)",
-      "dependencyManager": "pip",
+      "dependencyManager": "npm",
       "appTemplate": "step-functions-sample-app",
       "packageType": "Zip",
       "useCaseName": "Multi-step workflow"
     },
     {
-      "directory": "python3.7/web-conn",
-      "displayName": "Quick Start: Web Backend With Connectors",
-      "dependencyManager": "pip",
-      "appTemplate": "hello-world-connector",
+      "directory": "nodejs22.x/scratch",
+      "displayName": "Quick Start: From Scratch",
+      "dependencyManager": "npm",
+      "appTemplate": "quick-start-from-scratch",
       "packageType": "Zip",
-      "useCaseName": "Serverless Connector Hello World Example"
+      "useCaseName": "Standalone function"
     },
     {
-      "directory": "python3.7/step-func-conn",
-      "displayName": "Step Functions Sample App (Stock Trader) With Connectors",
-      "dependencyManager": "pip",
-      "appTemplate": "step-functions-with-connectors",
+      "directory": "nodejs22.x/cw-event",
+      "displayName": "Quick Start: Scheduled Events",
+      "dependencyManager": "npm",
+      "appTemplate": "quick-start-cloudwatch-events",
       "packageType": "Zip",
-      "useCaseName": "Multi-step workflow with Connectors"
+      "useCaseName": "Scheduled task"
+    },
+    {
+      "directory": "nodejs22.x/s3",
+      "displayName": "Quick Start: S3",
+      "dependencyManager": "npm",
+      "appTemplate": "quick-start-s3",
+      "packageType": "Zip",
+      "useCaseName": "Data processing"
+    },
+    {
+      "directory": "nodejs22.x/sns",
+      "displayName": "Quick Start: SNS",
+      "dependencyManager": "npm",
+      "appTemplate": "quick-start-sns",
+      "packageType": "Zip",
+      "useCaseName": "Data processing"
+    },
+    {
+      "directory": "nodejs22.x/sqs",
+      "displayName": "Quick Start: SQS",
+      "dependencyManager": "npm",
+      "appTemplate": "quick-start-sqs",
+      "packageType": "Zip",
+      "useCaseName": "Data processing"
+    },
+    {
+      "directory": "nodejs22.x/web",
+      "displayName": "Quick Start: Web Backend",
+      "dependencyManager": "npm",
+      "appTemplate": "quick-start-web",
+      "packageType": "Zip",
+      "useCaseName": "Serverless API"
+    },
+    {
+      "directory": "nodejs22.x/full-stack",
+      "displayName": "Quick Start: Full Stack Application",
+      "dependencyManager": "npm",
+      "appTemplate": "quick-start-full-stack",
+      "packageType": "Zip",
+      "useCaseName": "Full Stack"
+    },
+    {
+      "directory": "nodejs22.x/response-streaming",
+      "displayName": "Lambda function using Response Streaming",
+      "dependencyManager": "npm",
+      "appTemplate": "response-streaming",
+      "packageType": "Zip",
+      "useCaseName": "Lambda Response Streaming"
+    }
+  ],
+  "amazon/nodejs22.x-base": [
+    {
+      "directory": "nodejs22.x/hello-img",
+      "displayName": "Hello World Image Example",
+      "dependencyManager": "npm",
+      "appTemplate": "hello-world-lambda-image",
+      "packageType": "Image",
+      "useCaseName": "Hello World Example"
     }
   ],
   "python3.8": [
@@ -1173,9 +1105,210 @@
       "useCaseName": "Multi-step workflow with Connectors"
     }
   ],
-  "ruby2.7": [
+  "python3.11": [
     {
-      "directory": "ruby2.7/hello",
+      "directory": "python3.11/hello",
+      "displayName": "Hello World Example",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world",
+      "packageType": "Zip",
+      "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "python3.11/hello-pt",
+      "displayName": "Hello World Example with Powertools for AWS Lambda",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-powertools-python",
+      "packageType": "Zip",
+      "useCaseName": "Hello World Example with Powertools for AWS Lambda"
+    },
+    {
+      "directory": "python3.11/event-bridge",
+      "displayName": "EventBridge Hello World",
+      "dependencyManager": "pip",
+      "appTemplate": "eventBridge-hello-world",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "python3.11/event-bridge-schema",
+      "displayName": "EventBridge App from scratch (100+ Event Schemas)",
+      "dependencyManager": "pip",
+      "appTemplate": "eventBridge-schema-app",
+      "isDynamicTemplate": "True",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "python3.11/step-func",
+      "displayName": "Step Functions Sample App (Stock Trader)",
+      "dependencyManager": "pip",
+      "appTemplate": "step-functions-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "Multi-step workflow"
+    },
+    {
+      "directory": "python3.11/efs",
+      "displayName": "Elastic File System Sample App",
+      "dependencyManager": "pip",
+      "appTemplate": "efs-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "Lambda EFS example"
+    },
+    {
+      "directory": "python3.11/web-conn",
+      "displayName": "Quick Start: Web Backend With Connectors",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-connector",
+      "packageType": "Zip",
+      "useCaseName": "Serverless Connector Hello World Example"
+    },
+    {
+      "directory": "python3.11/step-func-conn",
+      "displayName": "Step Functions Sample App (Stock Trader) With Connectors",
+      "dependencyManager": "pip",
+      "appTemplate": "step-functions-with-connectors",
+      "packageType": "Zip",
+      "useCaseName": "Multi-step workflow with Connectors"
+    }
+  ],
+  "python3.12": [
+    {
+      "directory": "python3.12/hello",
+      "displayName": "Hello World Example",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world",
+      "packageType": "Zip",
+      "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "python3.12/hello-pt",
+      "displayName": "Hello World Example with Powertools for AWS Lambda",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-powertools-python",
+      "packageType": "Zip",
+      "useCaseName": "Hello World Example with Powertools for AWS Lambda"
+    },
+    {
+      "directory": "python3.12/event-bridge",
+      "displayName": "EventBridge Hello World",
+      "dependencyManager": "pip",
+      "appTemplate": "eventBridge-hello-world",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "python3.12/event-bridge-schema",
+      "displayName": "EventBridge App from scratch (100+ Event Schemas)",
+      "dependencyManager": "pip",
+      "appTemplate": "eventBridge-schema-app",
+      "isDynamicTemplate": "True",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "python3.12/step-func",
+      "displayName": "Step Functions Sample App (Stock Trader)",
+      "dependencyManager": "pip",
+      "appTemplate": "step-functions-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "Multi-step workflow"
+    },
+    {
+      "directory": "python3.12/efs",
+      "displayName": "Elastic File System Sample App",
+      "dependencyManager": "pip",
+      "appTemplate": "efs-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "Lambda EFS example"
+    },
+    {
+      "directory": "python3.12/web-conn",
+      "displayName": "Quick Start: Web Backend With Connectors",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-connector",
+      "packageType": "Zip",
+      "useCaseName": "Serverless Connector Hello World Example"
+    },
+    {
+      "directory": "python3.12/step-func-conn",
+      "displayName": "Step Functions Sample App (Stock Trader) With Connectors",
+      "dependencyManager": "pip",
+      "appTemplate": "step-functions-with-connectors",
+      "packageType": "Zip",
+      "useCaseName": "Multi-step workflow with Connectors"
+    }
+  ],
+  "python3.13": [
+    {
+      "directory": "python3.13/hello",
+      "displayName": "Hello World Example",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world",
+      "packageType": "Zip",
+      "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "python3.13/hello-pt",
+      "displayName": "Hello World Example with Powertools for AWS Lambda",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-powertools-python",
+      "packageType": "Zip",
+      "useCaseName": "Hello World Example with Powertools for AWS Lambda"
+    },
+    {
+      "directory": "python3.13/event-bridge",
+      "displayName": "EventBridge Hello World",
+      "dependencyManager": "pip",
+      "appTemplate": "eventBridge-hello-world",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "python3.13/event-bridge-schema",
+      "displayName": "EventBridge App from scratch (100+ Event Schemas)",
+      "dependencyManager": "pip",
+      "appTemplate": "eventBridge-schema-app",
+      "isDynamicTemplate": "True",
+      "packageType": "Zip",
+      "useCaseName": "Infrastructure event management"
+    },
+    {
+      "directory": "python3.13/step-func",
+      "displayName": "Step Functions Sample App (Stock Trader)",
+      "dependencyManager": "pip",
+      "appTemplate": "step-functions-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "Multi-step workflow"
+    },
+    {
+      "directory": "python3.13/efs",
+      "displayName": "Elastic File System Sample App",
+      "dependencyManager": "pip",
+      "appTemplate": "efs-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "Lambda EFS example"
+    },
+    {
+      "directory": "python3.13/web-conn",
+      "displayName": "Quick Start: Web Backend With Connectors",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-connector",
+      "packageType": "Zip",
+      "useCaseName": "Serverless Connector Hello World Example"
+    },
+    {
+      "directory": "python3.13/step-func-conn",
+      "displayName": "Step Functions Sample App (Stock Trader) With Connectors",
+      "dependencyManager": "pip",
+      "appTemplate": "step-functions-with-connectors",
+      "packageType": "Zip",
+      "useCaseName": "Multi-step workflow with Connectors"
+    }
+  ],
+  "ruby3.2": [
+    {
+      "directory": "ruby/hello",
       "displayName": "Hello World Example",
       "dependencyManager": "bundler",
       "appTemplate": "hello-world",
@@ -1183,12 +1316,46 @@
       "useCaseName": "Hello World Example"
     },
     {
-      "directory": "ruby2.7/step-func",
+      "directory": "ruby/step-func",
       "displayName": "Step Functions Sample App (Stock Trader)",
       "dependencyManager": "bundler",
       "appTemplate": "step-functions-sample-app",
       "packageType": "Zip",
       "useCaseName": "Multi-step workflow"
+    },
+    {
+      "directory": "ruby/web",
+      "displayName": "Quick Start: Web Backend",
+      "dependencyManager": "bundler",
+      "appTemplate": "quick-start-web",
+      "packageType": "Zip",
+      "useCaseName": "Serverless API"
+    }
+  ],
+  "ruby3.3": [
+    {
+      "directory": "ruby/hello",
+      "displayName": "Hello World Example",
+      "dependencyManager": "bundler",
+      "appTemplate": "hello-world",
+      "packageType": "Zip",
+      "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "ruby/step-func",
+      "displayName": "Step Functions Sample App (Stock Trader)",
+      "dependencyManager": "bundler",
+      "appTemplate": "step-functions-sample-app",
+      "packageType": "Zip",
+      "useCaseName": "Multi-step workflow"
+    },
+    {
+      "directory": "ruby/web",
+      "displayName": "Quick Start: Web Backend",
+      "dependencyManager": "bundler",
+      "appTemplate": "quick-start-web",
+      "packageType": "Zip",
+      "useCaseName": "Serverless API"
     }
   ],
   "rust (provided.al2)": [
@@ -1209,23 +1376,13 @@
       "useCaseName": "DynamoDB Example"
     }
   ],
-  "amazon/nodejs14.x-base": [
+  "rust (provided.al2023)": [
     {
-      "directory": "nodejs14.x/hello-img",
-      "displayName": "Hello World Image Example",
-      "dependencyManager": "npm",
-      "appTemplate": "hello-world-lambda-image",
-      "packageType": "Image",
-      "useCaseName": "Hello World Example"
-    }
-  ],
-  "amazon/nodejs12.x-base": [
-    {
-      "directory": "nodejs12.x/hello-img",
-      "displayName": "Hello World Image Example",
-      "dependencyManager": "npm",
-      "appTemplate": "hello-world-lambda-image",
-      "packageType": "Image",
+      "directory": "al2023/rust/hello",
+      "displayName": "Hello World Example",
+      "dependencyManager": "cargo",
+      "appTemplate": "hello-world",
+      "packageType": "Zip",
       "useCaseName": "Hello World Example"
     }
   ],
@@ -1243,14 +1400,6 @@
       "displayName": "PyTorch Machine Learning Inference API",
       "dependencyManager": "pip",
       "appTemplate": "ml-apigw-pytorch",
-      "packageType": "Image",
-      "useCaseName": "Machine Learning"
-    },
-    {
-      "directory": "python3.8/apigw-scikit",
-      "displayName": "Scikit-learn Machine Learning Inference API",
-      "dependencyManager": "pip",
-      "appTemplate": "ml-apigw-scikit-learn",
       "packageType": "Image",
       "useCaseName": "Machine Learning"
     },
@@ -1355,9 +1504,103 @@
       "useCaseName": "Machine Learning"
     }
   ],
-  "amazon/ruby2.7-base": [
+  "amazon/python3.11-base": [
     {
-      "directory": "ruby2.7/hello-img",
+      "directory": "python3.11/hello-img",
+      "displayName": "Hello World Lambda Image Example",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-lambda-image",
+      "packageType": "Image",
+      "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "python3.11/apigw-pytorch",
+      "displayName": "PyTorch Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-pytorch",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    },
+    {
+      "directory": "python3.11/apigw-scikit",
+      "displayName": "Scikit-learn Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-scikit-learn",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    },
+    {
+      "directory": "python3.11/apigw-tensorflow",
+      "displayName": "Tensorflow Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-tensorflow",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    },
+    {
+      "directory": "python3.11/apigw-xgboost",
+      "displayName": "XGBoost Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-xgboost",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    }
+  ],
+  "amazon/python3.12-base": [
+    {
+      "directory": "python3.12/hello-img",
+      "displayName": "Hello World Lambda Image Example",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-lambda-image",
+      "packageType": "Image",
+      "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "python3.12/apigw-scikit",
+      "displayName": "Scikit-learn Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-scikit-learn",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    },
+    {
+      "directory": "python3.12/apigw-xgboost",
+      "displayName": "XGBoost Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-xgboost",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    }
+  ],
+  "amazon/python3.13-base": [
+    {
+      "directory": "python3.13/hello-img",
+      "displayName": "Hello World Lambda Image Example",
+      "dependencyManager": "pip",
+      "appTemplate": "hello-world-lambda-image",
+      "packageType": "Image",
+      "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "python3.13/apigw-scikit",
+      "displayName": "Scikit-learn Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-scikit-learn",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    },
+    {
+      "directory": "python3.13/apigw-xgboost",
+      "displayName": "XGBoost Machine Learning Inference API",
+      "dependencyManager": "pip",
+      "appTemplate": "ml-apigw-xgboost",
+      "packageType": "Image",
+      "useCaseName": "Machine Learning"
+    }
+  ],
+  "amazon/ruby3.2-base": [
+    {
+      "directory": "ruby/hello-img",
       "displayName": "Hello World Lambda Image Example",
       "dependencyManager": "bundler",
       "appTemplate": "hello-world-lambda-image",
@@ -1365,11 +1608,11 @@
       "useCaseName": "Hello World Example"
     }
   ],
-  "amazon/go1.x-base": [
+  "amazon/ruby3.3-base": [
     {
-      "directory": "go1.x/hello-img",
+      "directory": "ruby/hello-img",
       "displayName": "Hello World Lambda Image Example",
-      "dependencyManager": "mod",
+      "dependencyManager": "bundler",
       "appTemplate": "hello-world-lambda-image",
       "packageType": "Image",
       "useCaseName": "Hello World Example"
@@ -1380,6 +1623,34 @@
       "directory": "al2/go/hello-img",
       "displayName": "Hello World Lambda Image Example",
       "dependencyManager": "mod",
+      "appTemplate": "hello-world-lambda-image",
+      "packageType": "Image",
+      "useCaseName": "Hello World Example"
+    }
+  ],
+  "amazon/go-provided.al2023-base": [
+    {
+      "directory": "al2023/go/hello-img",
+      "displayName": "Hello World Lambda Image Example",
+      "dependencyManager": "mod",
+      "appTemplate": "hello-world-lambda-image",
+      "packageType": "Image",
+      "useCaseName": "Hello World Example"
+    }
+  ],
+  "amazon/java21-base": [
+    {
+      "directory": "java21/hello-img-gradle",
+      "displayName": "Hello World Lambda Image Example: Gradle",
+      "dependencyManager": "gradle",
+      "appTemplate": "hello-world-lambda-image",
+      "packageType": "Image",
+      "useCaseName": "Hello World Example"
+    },
+    {
+      "directory": "java21/hello-img-maven",
+      "displayName": "Hello World Lambda Image Example: Maven",
+      "dependencyManager": "maven",
       "appTemplate": "hello-world-lambda-image",
       "packageType": "Image",
       "useCaseName": "Hello World Example"
@@ -1431,29 +1702,11 @@
       "useCaseName": "Hello World Example"
     }
   ],
-  "amazon/python3.7-base": [
+  "amazon/dotnet8-base": [
     {
-      "directory": "python3.7/hello-img",
+      "directory": "dotnet8/hello-img",
       "displayName": "Hello World Lambda Image Example",
-      "dependencyManager": "pip",
-      "appTemplate": "hello-world-lambda-image",
-      "packageType": "Image",
-      "useCaseName": "Hello World Example"
-    }
-  ],
-  "amazon/java8-base": [
-    {
-      "directory": "java8/hello-img-gradle",
-      "displayName": "Hello World Lambda Image Example: Gradle",
-      "dependencyManager": "gradle",
-      "appTemplate": "hello-world-lambda-image",
-      "packageType": "Image",
-      "useCaseName": "Hello World Example"
-    },
-    {
-      "directory": "java8/hello-img-maven",
-      "displayName": "Hello World Lambda Image Example: Maven",
-      "dependencyManager": "maven",
+      "dependencyManager": "cli-package",
       "appTemplate": "hello-world-lambda-image",
       "packageType": "Image",
       "useCaseName": "Hello World Example"
